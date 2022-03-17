@@ -19,14 +19,15 @@ function App()
   return (
     <div>
       <h1>give feedback</h1>
+     
 
-      <Buttons clicker={handle_good} text={"good"} />
-      <Buttons clicker={handle_neutral} text={"neutral"} />
-      <Buttons clicker={handle_bad} text={"bad"} />
-    
+         <Buttons clicker={handle_good} text={"good"} />
+         <Buttons clicker={handle_neutral} text={"neutral"} />
+         <Buttons clicker={handle_bad} text={"bad"} />
+       
 
       <h1>statistics</h1>
-      
+
       <Statistics good={good} neutral={neutral} bad={bad} />
 
     </div>

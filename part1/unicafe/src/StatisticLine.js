@@ -3,11 +3,10 @@ import React from "react";
 const StatisticLine = (props) =>
 {
 
-    return(
-        <div>
-            <h3>{props.text} {props.value}</h3>
-        </div>
-    )
+    return (
+        <tr>
+            <td>{props.text} {props.value}</td>
+        </tr>)
 }
 
 export default StatisticLine;
