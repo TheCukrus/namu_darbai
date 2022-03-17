@@ -5,14 +5,14 @@ const Part = (props) =>
     return (
         <div>
                <p>
-                {props.part1} {props.exercises1}
+                {props.name1} {props.exercises1}
             </p>
 
             <p>
-                {props.part2} {props.exercises2}
+                {props.name2} {props.exercises2}
             </p>
             <p>
-                {props.part3} {props.exercises3}
+                {props.name3} {props.exercises3}
             </p>
         </div>
     )
