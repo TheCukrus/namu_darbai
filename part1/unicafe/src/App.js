@@ -8,9 +8,11 @@ function App()
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
 
+  //functions for buttons
   const handle_good = () => setGood(good + 1);
   const handle_neutral = () => setNeutral(neutral + 1);
   const handle_bad = () => setBad(bad + 1)
+
 
   return (
     <div>
@@ -21,7 +23,14 @@ function App()
       <button onClick={handle_bad}>bad</button>
 
       <h1>statistics</h1>
-      <h3>good {good}<br />neutral {neutral} <br /> bad {bad}</h3>
+      <h3>good {good}<br />
+        neutral {neutral} <br />
+        bad {bad}<br />
+        all {good + neutral + bad}<br />
+        average {(good - bad) / (good + neutral + bad)}<br />
+        positive {good / (good + neutral + bad)*100}%
+
+      </h3>
 
     </div>
   );
