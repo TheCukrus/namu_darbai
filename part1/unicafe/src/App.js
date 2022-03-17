@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Buttons from "./Buttons";
 import Statistics from "./Statistics";
 
 function App()
@@ -19,11 +20,13 @@ function App()
     <div>
       <h1>give feedback</h1>
 
-      <button onClick={handle_good}>good</button>
-      <button onClick={handle_neutral}>neutral</button>
-      <button onClick={handle_bad}>bad</button>
+      <Buttons clicker={handle_good} text={"good"} />
+      <Buttons clicker={handle_neutral} text={"neutral"} />
+      <Buttons clicker={handle_bad} text={"bad"} />
+    
 
       <h1>statistics</h1>
+      
       <Statistics good={good} neutral={neutral} bad={bad} />
 
     </div>
