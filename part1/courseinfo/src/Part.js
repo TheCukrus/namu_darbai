@@ -2,6 +2,7 @@ import React from "react";
 
 const Part = (props) =>
 {
+    console.log(props)
     return (
         <div>
                <p>
@@ -13,6 +14,9 @@ const Part = (props) =>
             </p>
             <p>
                 {props.name3} {props.exercises3}
+            </p>
+            <p>
+                {props.name4} {props.exercises4}
             </p>
         </div>
     )
