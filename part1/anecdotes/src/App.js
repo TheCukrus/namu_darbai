@@ -31,17 +31,37 @@ const App = () =>
     copy[selected] += 1;
     return set_votes(copy)
   }
+  let counter = 0;
+  for (let i = 0; i < anecdotes.length; i++)
+  {
+    if (counter < vote[i])
+    {
+      counter = vote[i]
+    }
+  }
 
-
-
+  const most_voted_anecdote = () =>
+  {
+    for (let i = 0; i < anecdotes.length; i++)
+    {
+      if(counter === vote[i])
+      {
+        return anecdotes[i]
+      }
+    }
+  }
 
 
   return (
     <div>
+      <h1>Anecdote of the day</h1>
       {anecdotes[selected]}<br />
       <p>has {vote[selected]} votes</p>
       <button onClick={handle_vote}>vote</button>
       <button onClick={handle_click}>next anecdote</button>
+      <h1>Anecdote with most votes</h1>
+    {most_voted_anecdote()}
+      <p>has {counter} votes</p>
     </div>
   )
 }
