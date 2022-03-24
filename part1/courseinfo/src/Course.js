@@ -6,14 +6,18 @@ import Total from "./Total";
 const Course = (props) =>
 {
     const course = props.course;
+    const course_view = [];
+    for (let i = 0; i < course.length; i++)
+    {
+        course_view.push(<Header key={course_view.length} course={course[i].name} />)
+        course_view.push(<Content key={course_view.length} part={course[i]} />)
+        course_view.push(<Total key={course_view} course={course[i]} />)
+    }
 
     return (
         <div>
-            <Header course={course.name} />
-            <Content parts={course.parts} />
-            {/* <Total exercises={course.parts[0].exercises + course.parts[1].exercises + course.parts[2].exercises + course.parts[3].exercises} /> */}
-              <Total course={course} />
-
+            {course_view}
+           
         </div>
     )
 }
